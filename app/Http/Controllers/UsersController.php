@@ -60,7 +60,9 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('editUser',[
+            'user'=> User::where('id',$id)->first()
+        ]);
     }
 
     /**
@@ -72,7 +74,12 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        User::where('id',$id)->update([
+            'name'=>$request->name,
+            'email'=> $request->email,
+            'role'=>$request->role
+        ]);
+        return redirect(route('users.index'));
     }
 
     /**
@@ -83,6 +90,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return redirect(route('users.index'))->with('message','User has been deleted');
     }
 }
