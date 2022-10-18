@@ -47,7 +47,9 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('singleProduct',[
+            'product'=>Product::where('id',$id)->first()
+        ]);
     }
 
     /**
