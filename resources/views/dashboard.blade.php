@@ -23,7 +23,7 @@
                     <h5 class="card-title">Number Of Products</h5>
                     <div class="row">
                         <h6 class="card-text col-6">{{ $allProducts }} </h6>
-                        <a href="products" class=" btn btn-primary text-white text-decoration-none col-6 ">
+                        <a href="{{ route('productsAdmin.index') }}" class=" btn btn-primary text-white text-decoration-none col-6 ">
                             <h6 class="text-white m-0 p-0">
                                 Show Products
                             </h6>

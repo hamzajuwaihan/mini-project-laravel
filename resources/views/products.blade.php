@@ -8,11 +8,12 @@
                 <div class="col">
                     <div class="card h-100">
                         <a href="{{ route('products.show' , $item->id) }}">
-                            <img src="{{ $item->image }}" class="card-img-top" alt="...">
+                            <img src="./images/{{ $item->image }}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->product_name }}</h5>
                             <p class="card-text text-center"><b>${{ $item->price }}</b></p>
+                            
                         </div>
                     </div>
                 </div>

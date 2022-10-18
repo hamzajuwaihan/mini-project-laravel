@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductsAdmin;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
@@ -25,3 +26,4 @@ Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::resource('/products',ProductsController::class );
 Route::resource('/users',UsersController::class);
+Route::resource('/productsAdmin',ProductsAdmin::class);
