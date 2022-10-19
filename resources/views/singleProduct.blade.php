@@ -4,7 +4,7 @@
     <div class="contianer w-75 mx-auto mt-5 ">
         <div class="row">
             <div class="col-4">
-                <img src="./images/{{ $product->image }}" alt="" class="img-fluid">
+                <img src="/images/{{ $product->image }}" alt="" class="img-fluid">
             </div>
             <div class="col-8">
                 <div class="row">
